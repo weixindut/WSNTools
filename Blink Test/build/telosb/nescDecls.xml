@@ -1,0 +1,1681 @@
+<?xml version='1.0' standalone='yes'?>
+<nescDecls>
+  <enums>
+    <enum name="__fdlibm_ieee" value="-1" />
+    <enum name="FALSE" value="I:0" />
+    <enum name="TRUE" value="I:1" />
+    <enum name="SUCCESS" value="I:0" />
+    <enum name="FAIL" value="I:1" />
+    <enum name="ESIZE" value="I:2" />
+    <enum name="ECANCEL" value="I:3" />
+    <enum name="EOFF" value="I:4" />
+    <enum name="EBUSY" value="I:5" />
+    <enum name="EINVAL" value="I:6" />
+    <enum name="ERETRY" value="I:7" />
+    <enum name="ERESERVE" value="I:8" />
+    <enum name="EALREADY" value="I:9" />
+    <enum name="ENOMEM" value="I:10" />
+    <enum name="ENOACK" value="I:11" />
+    <enum name="ELAST" value="I:11" />
+    <enum name="MSP430_POWER_ACTIVE" value="I:0" />
+    <enum name="MSP430_POWER_LPM0" value="I:1" />
+    <enum name="MSP430_POWER_LPM1" value="I:2" />
+    <enum name="MSP430_POWER_LPM2" value="I:3" />
+    <enum name="MSP430_POWER_LPM3" value="I:4" />
+    <enum name="MSP430_POWER_LPM4" value="I:5" />
+    <enum name="TOS_SLEEP_NONE" value="MSP430_POWER_ACTIVE" />
+    <enum name="TOSH_HUMIDITY_ADDR" value="I:5" />
+    <enum name="TOSH_HUMIDTEMP_ADDR" value="I:3" />
+    <enum name="TOSH_HUMIDITY_RESET" value="0x1E" />
+    <enum name="MSP430TIMER_CM_NONE" value="I:0" />
+    <enum name="MSP430TIMER_CM_RISING" value="I:1" />
+    <enum name="MSP430TIMER_CM_FALLING" value="I:2" />
+    <enum name="MSP430TIMER_CM_BOTH" value="I:3" />
+    <enum name="MSP430TIMER_STOP_MODE" value="I:0" />
+    <enum name="MSP430TIMER_UP_MODE" value="I:1" />
+    <enum name="MSP430TIMER_CONTINUOUS_MODE" value="I:2" />
+    <enum name="MSP430TIMER_UPDOWN_MODE" value="I:3" />
+    <enum name="MSP430TIMER_TACLK" value="I:0" />
+    <enum name="MSP430TIMER_TBCLK" value="I:0" />
+    <enum name="MSP430TIMER_ACLK" value="I:1" />
+    <enum name="MSP430TIMER_SMCLK" value="I:2" />
+    <enum name="MSP430TIMER_INCLK" value="I:3" />
+    <enum name="MSP430TIMER_CLOCKDIV_1" value="I:0" />
+    <enum name="MSP430TIMER_CLOCKDIV_2" value="I:1" />
+    <enum name="MSP430TIMER_CLOCKDIV_4" value="I:2" />
+    <enum name="MSP430TIMER_CLOCKDIV_8" value="I:3" />
+    <enum name="AM_RPCCOMMANDMSG" value="I:211" />
+    <enum name="AM_RPCRESPONSEMSG" value="I:212" />
+    <enum name="RPC_SUCCESS" value="I:0" />
+    <enum name="RPC_GARBAGE_ARGS" value="I:1" />
+    <enum name="RPC_RESPONSE_TOO_LARGE" value="I:2" />
+    <enum name="RPC_PROCEDURE_UNAVAIL" value="I:3" />
+    <enum name="RPC_SYSTEM_ERR" value="I:4" />
+    <enum name="LEDS_LED0" value="1 &lt;&lt; 0" />
+    <enum name="LEDS_LED1" value="1 &lt;&lt; 1" />
+    <enum name="LEDS_LED2" value="1 &lt;&lt; 2" />
+    <enum name="LEDS_LED3" value="1 &lt;&lt; 3" />
+    <enum name="LEDS_LED4" value="1 &lt;&lt; 4" />
+    <enum name="LEDS_LED5" value="1 &lt;&lt; 5" />
+    <enum name="LEDS_LED6" value="1 &lt;&lt; 6" />
+    <enum name="LEDS_LED7" value="1 &lt;&lt; 7" />
+    <enum name="MAX_RAM_SYMBOL_SIZE" value="13 - sizeof(unsigned int ) - sizeof(uint8_t ) - sizeof(bool )" />
+    <enum name="MAC_HEADER_SIZE" value="sizeof(cc2420_header_t ) - 1" />
+    <enum name="MAC_FOOTER_SIZE" value="sizeof(uint16_t )" />
+    <enum name="MAC_PACKET_SIZE" value="MAC_HEADER_SIZE + 28 + MAC_FOOTER_SIZE" />
+    <enum name="CC2420_SIZE" value="MAC_HEADER_SIZE + MAC_FOOTER_SIZE" />
+    <enum name="AM_OVERHEAD" value="I:2" />
+    <enum name="CC2420_TIME_ACK_TURNAROUND" value="I:7" />
+    <enum name="CC2420_TIME_VREN" value="I:20" />
+    <enum name="CC2420_TIME_SYMBOL" value="I:2" />
+    <enum name="CC2420_BACKOFF_PERIOD" value="20 / CC2420_TIME_SYMBOL" />
+    <enum name="CC2420_MIN_BACKOFF" value="20 / CC2420_TIME_SYMBOL" />
+    <enum name="CC2420_ACK_WAIT_DELAY" value="I:256" />
+    <enum name="CC2420_STATUS_RSSI_VALID" value="1 &lt;&lt; 1" />
+    <enum name="CC2420_STATUS_LOCK" value="1 &lt;&lt; 2" />
+    <enum name="CC2420_STATUS_TX_ACTIVE" value="1 &lt;&lt; 3" />
+    <enum name="CC2420_STATUS_ENC_BUSY" value="1 &lt;&lt; 4" />
+    <enum name="CC2420_STATUS_TX_UNDERFLOW" value="1 &lt;&lt; 5" />
+    <enum name="CC2420_STATUS_XOSC16M_STABLE" value="1 &lt;&lt; 6" />
+    <enum name="CC2420_SNOP" value="0x00" />
+    <enum name="CC2420_SXOSCON" value="0x01" />
+    <enum name="CC2420_STXCAL" value="0x02" />
+    <enum name="CC2420_SRXON" value="0x03" />
+    <enum name="CC2420_STXON" value="0x04" />
+    <enum name="CC2420_STXONCCA" value="0x05" />
+    <enum name="CC2420_SRFOFF" value="0x06" />
+    <enum name="CC2420_SXOSCOFF" value="0x07" />
+    <enum name="CC2420_SFLUSHRX" value="0x08" />
+    <enum name="CC2420_SFLUSHTX" value="0x09" />
+    <enum name="CC2420_SACK" value="0x0a" />
+    <enum name="CC2420_SACKPEND" value="0x0b" />
+    <enum name="CC2420_SRXDEC" value="0x0c" />
+    <enum name="CC2420_STXENC" value="0x0d" />
+    <enum name="CC2420_SAES" value="0x0e" />
+    <enum name="CC2420_MAIN" value="0x10" />
+    <enum name="CC2420_MDMCTRL0" value="0x11" />
+    <enum name="CC2420_MDMCTRL1" value="0x12" />
+    <enum name="CC2420_RSSI" value="0x13" />
+    <enum name="CC2420_SYNCWORD" value="0x14" />
+    <enum name="CC2420_TXCTRL" value="0x15" />
+    <enum name="CC2420_RXCTRL0" value="0x16" />
+    <enum name="CC2420_RXCTRL1" value="0x17" />
+    <enum name="CC2420_FSCTRL" value="0x18" />
+    <enum name="CC2420_SECCTRL0" value="0x19" />
+    <enum name="CC2420_SECCTRL1" value="0x1a" />
+    <enum name="CC2420_BATTMON" value="0x1b" />
+    <enum name="CC2420_IOCFG0" value="0x1c" />
+    <enum name="CC2420_IOCFG1" value="0x1d" />
+    <enum name="CC2420_MANFIDL" value="0x1e" />
+    <enum name="CC2420_MANFIDH" value="0x1f" />
+    <enum name="CC2420_FSMTC" value="0x20" />
+    <enum name="CC2420_MANAND" value="0x21" />
+    <enum name="CC2420_MANOR" value="0x22" />
+    <enum name="CC2420_AGCCTRL" value="0x23" />
+    <enum name="CC2420_AGCTST0" value="0x24" />
+    <enum name="CC2420_AGCTST1" value="0x25" />
+    <enum name="CC2420_AGCTST2" value="0x26" />
+    <enum name="CC2420_FSTST0" value="0x27" />
+    <enum name="CC2420_FSTST1" value="0x28" />
+    <enum name="CC2420_FSTST2" value="0x29" />
+    <enum name="CC2420_FSTST3" value="0x2a" />
+    <enum name="CC2420_RXBPFTST" value="0x2b" />
+    <enum name="CC2420_FMSTATE" value="0x2c" />
+    <enum name="CC2420_ADCTST" value="0x2d" />
+    <enum name="CC2420_DACTST" value="0x2e" />
+    <enum name="CC2420_TOPTST" value="0x2f" />
+    <enum name="CC2420_TXFIFO" value="0x3e" />
+    <enum name="CC2420_RXFIFO" value="0x3f" />
+    <enum name="CC2420_RAM_TXFIFO" value="0x000" />
+    <enum name="CC2420_RAM_RXFIFO" value="0x080" />
+    <enum name="CC2420_RAM_KEY0" value="0x100" />
+    <enum name="CC2420_RAM_RXNONCE" value="0x110" />
+    <enum name="CC2420_RAM_SABUF" value="0x120" />
+    <enum name="CC2420_RAM_KEY1" value="0x130" />
+    <enum name="CC2420_RAM_TXNONCE" value="0x140" />
+    <enum name="CC2420_RAM_CBCSTATE" value="0x150" />
+    <enum name="CC2420_RAM_IEEEADR" value="0x160" />
+    <enum name="CC2420_RAM_PANID" value="0x168" />
+    <enum name="CC2420_RAM_SHORTADR" value="0x16a" />
+    <enum name="CC2420_NONCE_BLOCK_COUNTER" value="I:0" />
+    <enum name="CC2420_NONCE_KEY_SEQ_COUNTER" value="I:2" />
+    <enum name="CC2420_NONCE_FRAME_COUNTER" value="I:3" />
+    <enum name="CC2420_NONCE_SOURCE_ADDRESS" value="I:7" />
+    <enum name="CC2420_NONCE_FLAGS" value="I:15" />
+    <enum name="CC2420_MAIN_RESETn" value="I:15" />
+    <enum name="CC2420_MAIN_ENC_RESETn" value="I:14" />
+    <enum name="CC2420_MAIN_DEMOD_RESETn" value="I:13" />
+    <enum name="CC2420_MAIN_MOD_RESETn" value="I:12" />
+    <enum name="CC2420_MAIN_FS_RESETn" value="I:11" />
+    <enum name="CC2420_MAIN_XOSC16M_BYPASS" value="I:0" />
+    <enum name="CC2420_MDMCTRL0_RESERVED_FRAME_MODE" value="I:13" />
+    <enum name="CC2420_MDMCTRL0_PAN_COORDINATOR" value="I:12" />
+    <enum name="CC2420_MDMCTRL0_ADR_DECODE" value="I:11" />
+    <enum name="CC2420_MDMCTRL0_CCA_HYST" value="I:8" />
+    <enum name="CC2420_MDMCTRL0_CCA_MOD" value="I:6" />
+    <enum name="CC2420_MDMCTRL0_AUTOCRC" value="I:5" />
+    <enum name="CC2420_MDMCTRL0_AUTOACK" value="I:4" />
+    <enum name="CC2420_MDMCTRL0_PREAMBLE_LENGTH" value="I:0" />
+    <enum name="CC2420_MDMCTRL1_CORR_THR" value="I:6" />
+    <enum name="CC2420_MDMCTRL1_DEMOD_AVG_MODE" value="I:5" />
+    <enum name="CC2420_MDMCTRL1_MODULATION_MODE" value="I:4" />
+    <enum name="CC2420_MDMCTRL1_TX_MODE" value="I:2" />
+    <enum name="CC2420_MDMCTRL1_RX_MODE" value="I:0" />
+    <enum name="CC2420_RSSI_CCA_THR" value="I:8" />
+    <enum name="CC2420_RSSI_RSSI_VAL" value="I:0" />
+    <enum name="CC2420_SYNCWORD_SYNCWORD" value="I:0" />
+    <enum name="CC2420_TXCTRL_TXMIXBUF_CUR" value="I:14" />
+    <enum name="CC2420_TXCTRL_TX_TURNAROUND" value="I:13" />
+    <enum name="CC2420_TXCTRL_TXMIX_CAP_ARRAY" value="I:11" />
+    <enum name="CC2420_TXCTRL_TXMIX_CURRENT" value="I:9" />
+    <enum name="CC2420_TXCTRL_PA_CURRENT" value="I:6" />
+    <enum name="CC2420_TXCTRL_RESERVED" value="I:5" />
+    <enum name="CC2420_TXCTRL_PA_LEVEL" value="I:0" />
+    <enum name="CC2420_RXCTRL0_RXMIXBUF_CUR" value="I:12" />
+    <enum name="CC2420_RXCTRL0_HIGH_LNA_GAIN" value="I:10" />
+    <enum name="CC2420_RXCTRL0_MED_LNA_GAIN" value="I:8" />
+    <enum name="CC2420_RXCTRL0_LOW_LNA_GAIN" value="I:6" />
+    <enum name="CC2420_RXCTRL0_HIGH_LNA_CURRENT" value="I:4" />
+    <enum name="CC2420_RXCTRL0_MED_LNA_CURRENT" value="I:2" />
+    <enum name="CC2420_RXCTRL0_LOW_LNA_CURRENT" value="I:0" />
+    <enum name="CC2420_RXCTRL1_RXBPF_LOCUR" value="I:13" />
+    <enum name="CC2420_RXCTRL1_RXBPF_MIDCUR" value="I:12" />
+    <enum name="CC2420_RXCTRL1_LOW_LOWGAIN" value="I:11" />
+    <enum name="CC2420_RXCTRL1_MED_LOWGAIN" value="I:10" />
+    <enum name="CC2420_RXCTRL1_HIGH_HGM" value="I:9" />
+    <enum name="CC2420_RXCTRL1_MED_HGM" value="I:8" />
+    <enum name="CC2420_RXCTRL1_LNA_CAP_ARRAY" value="I:6" />
+    <enum name="CC2420_RXCTRL1_RXMIX_TAIL" value="I:4" />
+    <enum name="CC2420_RXCTRL1_RXMIX_VCM" value="I:2" />
+    <enum name="CC2420_RXCTRL1_RXMIX_CURRENT" value="I:0" />
+    <enum name="CC2420_FSCTRL_LOCK_THR" value="I:14" />
+    <enum name="CC2420_FSCTRL_CAL_DONE" value="I:13" />
+    <enum name="CC2420_FSCTRL_CAL_RUNNING" value="I:12" />
+    <enum name="CC2420_FSCTRL_LOCK_LENGTH" value="I:11" />
+    <enum name="CC2420_FSCTRL_LOCK_STATUS" value="I:10" />
+    <enum name="CC2420_FSCTRL_FREQ" value="I:0" />
+    <enum name="CC2420_SECCTRL0_RXFIFO_PROTECTION" value="I:9" />
+    <enum name="CC2420_SECCTRL0_SEC_CBC_HEAD" value="I:8" />
+    <enum name="CC2420_SECCTRL0_SEC_SAKEYSEL" value="I:7" />
+    <enum name="CC2420_SECCTRL0_SEC_TXKEYSEL" value="I:6" />
+    <enum name="CC2420_SECCTRL0_SEC_RXKEYSEL" value="I:5" />
+    <enum name="CC2420_SECCTRL0_SEC_M" value="I:2" />
+    <enum name="CC2420_SECCTRL0_SEC_MODE" value="I:0" />
+    <enum name="CC2420_SECCTRL1_SEC_TXL" value="I:8" />
+    <enum name="CC2420_SECCTRL1_SEC_RXL" value="I:0" />
+    <enum name="CC2420_BATTMON_BATT_OK" value="I:6" />
+    <enum name="CC2420_BATTMON_BATTMON_EN" value="I:5" />
+    <enum name="CC2420_BATTMON_BATTMON_VOLTAGE" value="I:0" />
+    <enum name="CC2420_IOCFG0_BCN_ACCEPT" value="I:11" />
+    <enum name="CC2420_IOCFG0_FIFO_POLARITY" value="I:10" />
+    <enum name="CC2420_IOCFG0_FIFOP_POLARITY" value="I:9" />
+    <enum name="CC2420_IOCFG0_SFD_POLARITY" value="I:8" />
+    <enum name="CC2420_IOCFG0_CCA_POLARITY" value="I:7" />
+    <enum name="CC2420_IOCFG0_FIFOP_THR" value="I:0" />
+    <enum name="CC2420_IOCFG1_HSSD_SRC" value="I:10" />
+    <enum name="CC2420_IOCFG1_SFDMUX" value="I:5" />
+    <enum name="CC2420_IOCFG1_CCAMUX" value="I:0" />
+    <enum name="CC2420_MANFIDL_PARTNUM" value="I:12" />
+    <enum name="CC2420_MANFIDL_MANFID" value="I:0" />
+    <enum name="CC2420_MANFIDH_VERSION" value="I:12" />
+    <enum name="CC2420_MANFIDH_PARTNUM" value="I:0" />
+    <enum name="CC2420_FSMTC_TC_RXCHAIN2RX" value="I:13" />
+    <enum name="CC2420_FSMTC_TC_SWITCH2TX" value="I:10" />
+    <enum name="CC2420_FSMTC_TC_PAON2TX" value="I:6" />
+    <enum name="CC2420_FSMTC_TC_TXEND2SWITCH" value="I:3" />
+    <enum name="CC2420_FSMTC_TC_TXEND2PAOFF" value="I:0" />
+    <enum name="CC2420_SFDMUX_SFD" value="I:0" />
+    <enum name="CC2420_SFDMUX_XOSC16M_STABLE" value="I:24" />
+    <enum name="CC2420_NO_SEC" value="I:0" />
+    <enum name="CC2420_CBC_MAC" value="I:1" />
+    <enum name="CC2420_CTR" value="I:2" />
+    <enum name="CC2420_CCM" value="I:3" />
+    <enum name="NO_SEC" value="I:0" />
+    <enum name="CBC_MAC_4" value="I:1" />
+    <enum name="CBC_MAC_8" value="I:2" />
+    <enum name="CBC_MAC_16" value="I:3" />
+    <enum name="CTR" value="I:4" />
+    <enum name="CCM_4" value="I:5" />
+    <enum name="CCM_8" value="I:6" />
+    <enum name="CCM_16" value="I:7" />
+    <enum name="CC2420_INVALID_TIMESTAMP" value="0x80000000L" />
+    <enum name="AM_BROADCAST_ADDR" value="0xffff" />
+    <enum name="TOS_AM_GROUP" value="0x22" />
+    <enum name="TOS_AM_ADDRESS" value="I:1" />
+    <enum name="HDLC_FLAG_BYTE" value="0x7e" />
+    <enum name="HDLC_CTLESC_BYTE" value="0x7d" />
+    <enum name="TOS_SERIAL_ACTIVE_MESSAGE_ID" value="I:0" />
+    <enum name="TOS_SERIAL_CC1000_ID" value="I:1" />
+    <enum name="TOS_SERIAL_802_15_4_ID" value="I:2" />
+    <enum name="TOS_SERIAL_UNKNOWN_ID" value="I:255" />
+    <enum name="SERIAL_PROTO_ACK" value="I:67" />
+    <enum name="SERIAL_PROTO_PACKET_ACK" value="I:68" />
+    <enum name="SERIAL_PROTO_PACKET_NOACK" value="I:69" />
+    <enum name="SERIAL_PROTO_PACKET_UNKNOWN" value="I:255" />
+    <enum name="USART_NONE" value="I:0" />
+    <enum name="USART_UART" value="I:1" />
+    <enum name="USART_UART_TX" value="I:2" />
+    <enum name="USART_UART_RX" value="I:3" />
+    <enum name="USART_SPI" value="I:4" />
+    <enum name="USART_I2C" value="I:5" />
+    <enum name="UBR_32KHZ_1200" value="0x001B" />
+    <enum name="UMCTL_32KHZ_1200" value="0x94" />
+    <enum name="UBR_32KHZ_1800" value="0x0012" />
+    <enum name="UMCTL_32KHZ_1800" value="0x84" />
+    <enum name="UBR_32KHZ_2400" value="0x000D" />
+    <enum name="UMCTL_32KHZ_2400" value="0x6D" />
+    <enum name="UBR_32KHZ_4800" value="0x0006" />
+    <enum name="UMCTL_32KHZ_4800" value="0x77" />
+    <enum name="UBR_32KHZ_9600" value="0x0003" />
+    <enum name="UMCTL_32KHZ_9600" value="0x29" />
+    <enum name="UBR_1MHZ_1200" value="0x0369" />
+    <enum name="UMCTL_1MHZ_1200" value="0x7B" />
+    <enum name="UBR_1MHZ_1800" value="0x0246" />
+    <enum name="UMCTL_1MHZ_1800" value="0x55" />
+    <enum name="UBR_1MHZ_2400" value="0x01B4" />
+    <enum name="UMCTL_1MHZ_2400" value="0xDF" />
+    <enum name="UBR_1MHZ_4800" value="0x00DA" />
+    <enum name="UMCTL_1MHZ_4800" value="0xAA" />
+    <enum name="UBR_1MHZ_9600" value="0x006D" />
+    <enum name="UMCTL_1MHZ_9600" value="0x44" />
+    <enum name="UBR_1MHZ_19200" value="0x0036" />
+    <enum name="UMCTL_1MHZ_19200" value="0xB5" />
+    <enum name="UBR_1MHZ_38400" value="0x001B" />
+    <enum name="UMCTL_1MHZ_38400" value="0x94" />
+    <enum name="UBR_1MHZ_57600" value="0x0012" />
+    <enum name="UMCTL_1MHZ_57600" value="0x84" />
+    <enum name="UBR_1MHZ_76800" value="0x000D" />
+    <enum name="UMCTL_1MHZ_76800" value="0x6D" />
+    <enum name="UBR_1MHZ_115200" value="0x0009" />
+    <enum name="UMCTL_1MHZ_115200" value="0x10" />
+    <enum name="UBR_1MHZ_230400" value="0x0004" />
+    <enum name="UMCTL_1MHZ_230400" value="0x55" />
+    <enum name="TOS_UART_1200" value="I:0" />
+    <enum name="TOS_UART_1800" value="I:1" />
+    <enum name="TOS_UART_2400" value="I:2" />
+    <enum name="TOS_UART_4800" value="I:3" />
+    <enum name="TOS_UART_9600" value="I:4" />
+    <enum name="TOS_UART_19200" value="I:5" />
+    <enum name="TOS_UART_38400" value="I:6" />
+    <enum name="TOS_UART_57600" value="I:7" />
+    <enum name="TOS_UART_76800" value="I:8" />
+    <enum name="TOS_UART_115200" value="I:9" />
+    <enum name="TOS_UART_230400" value="I:10" />
+    <enum name="Msp430ClockP__ACLK_CALIB_PERIOD" value="I:8" />
+    <enum name="Msp430ClockP__TARGET_DCO_DELTA" value="4096 / 32 * Msp430ClockP__ACLK_CALIB_PERIOD" />
+    <enum name="SchedulerBasicP__NUM_TASKS" value="8U" />
+    <enum name="SchedulerBasicP__NO_TASK" value="I:255" />
+    <enum name="RpcM__processCommand" value="0U" />
+    <enum name="SerialP__RunTx" value="1U" />
+    <enum name="SerialP__startDoneTask" value="2U" />
+    <enum name="SerialP__stopDoneTask" value="3U" />
+    <enum name="SerialP__defaultSerialFlushTask" value="4U" />
+    <enum name="SerialP__RX_DATA_BUFFER_SIZE" value="I:2" />
+    <enum name="SerialP__TX_DATA_BUFFER_SIZE" value="I:4" />
+    <enum name="SerialP__SERIAL_MTU" value="I:255" />
+    <enum name="SerialP__SERIAL_VERSION" value="I:1" />
+    <enum name="SerialP__ACK_QUEUE_SIZE" value="I:5" />
+    <enum name="SerialP__TX_ACK_INDEX" value="I:0" />
+    <enum name="SerialP__TX_DATA_INDEX" value="I:1" />
+    <enum name="SerialP__TX_BUFFER_COUNT" value="I:2" />
+    <namedEnum name="__fdlibm_version">
+      <enum name="__fdlibm_ieee" value="-1" />
+    </namedEnum>
+    <namedEnum name="rpcMsgs">
+      <enum name="AM_RPCCOMMANDMSG" value="I:211" />
+      <enum name="AM_RPCRESPONSEMSG" value="I:212" />
+    </namedEnum>
+    <namedEnum name="rpcErrorCodes">
+      <enum name="RPC_SUCCESS" value="I:0" />
+      <enum name="RPC_GARBAGE_ARGS" value="I:1" />
+      <enum name="RPC_RESPONSE_TOO_LARGE" value="I:2" />
+      <enum name="RPC_PROCEDURE_UNAVAIL" value="I:3" />
+      <enum name="RPC_SYSTEM_ERR" value="I:4" />
+    </namedEnum>
+    <namedEnum name="cc2420_enums">
+      <enum name="CC2420_TIME_ACK_TURNAROUND" value="I:7" />
+      <enum name="CC2420_TIME_VREN" value="I:20" />
+      <enum name="CC2420_TIME_SYMBOL" value="I:2" />
+      <enum name="CC2420_BACKOFF_PERIOD" value="20 / CC2420_TIME_SYMBOL" />
+      <enum name="CC2420_MIN_BACKOFF" value="20 / CC2420_TIME_SYMBOL" />
+      <enum name="CC2420_ACK_WAIT_DELAY" value="I:256" />
+    </namedEnum>
+    <namedEnum name="cc2420_status_enums">
+      <enum name="CC2420_STATUS_RSSI_VALID" value="1 &lt;&lt; 1" />
+      <enum name="CC2420_STATUS_LOCK" value="1 &lt;&lt; 2" />
+      <enum name="CC2420_STATUS_TX_ACTIVE" value="1 &lt;&lt; 3" />
+      <enum name="CC2420_STATUS_ENC_BUSY" value="1 &lt;&lt; 4" />
+      <enum name="CC2420_STATUS_TX_UNDERFLOW" value="1 &lt;&lt; 5" />
+      <enum name="CC2420_STATUS_XOSC16M_STABLE" value="1 &lt;&lt; 6" />
+    </namedEnum>
+    <namedEnum name="cc2420_config_reg_enums">
+      <enum name="CC2420_SNOP" value="0x00" />
+      <enum name="CC2420_SXOSCON" value="0x01" />
+      <enum name="CC2420_STXCAL" value="0x02" />
+      <enum name="CC2420_SRXON" value="0x03" />
+      <enum name="CC2420_STXON" value="0x04" />
+      <enum name="CC2420_STXONCCA" value="0x05" />
+      <enum name="CC2420_SRFOFF" value="0x06" />
+      <enum name="CC2420_SXOSCOFF" value="0x07" />
+      <enum name="CC2420_SFLUSHRX" value="0x08" />
+      <enum name="CC2420_SFLUSHTX" value="0x09" />
+      <enum name="CC2420_SACK" value="0x0a" />
+      <enum name="CC2420_SACKPEND" value="0x0b" />
+      <enum name="CC2420_SRXDEC" value="0x0c" />
+      <enum name="CC2420_STXENC" value="0x0d" />
+      <enum name="CC2420_SAES" value="0x0e" />
+      <enum name="CC2420_MAIN" value="0x10" />
+      <enum name="CC2420_MDMCTRL0" value="0x11" />
+      <enum name="CC2420_MDMCTRL1" value="0x12" />
+      <enum name="CC2420_RSSI" value="0x13" />
+      <enum name="CC2420_SYNCWORD" value="0x14" />
+      <enum name="CC2420_TXCTRL" value="0x15" />
+      <enum name="CC2420_RXCTRL0" value="0x16" />
+      <enum name="CC2420_RXCTRL1" value="0x17" />
+      <enum name="CC2420_FSCTRL" value="0x18" />
+      <enum name="CC2420_SECCTRL0" value="0x19" />
+      <enum name="CC2420_SECCTRL1" value="0x1a" />
+      <enum name="CC2420_BATTMON" value="0x1b" />
+      <enum name="CC2420_IOCFG0" value="0x1c" />
+      <enum name="CC2420_IOCFG1" value="0x1d" />
+      <enum name="CC2420_MANFIDL" value="0x1e" />
+      <enum name="CC2420_MANFIDH" value="0x1f" />
+      <enum name="CC2420_FSMTC" value="0x20" />
+      <enum name="CC2420_MANAND" value="0x21" />
+      <enum name="CC2420_MANOR" value="0x22" />
+      <enum name="CC2420_AGCCTRL" value="0x23" />
+      <enum name="CC2420_AGCTST0" value="0x24" />
+      <enum name="CC2420_AGCTST1" value="0x25" />
+      <enum name="CC2420_AGCTST2" value="0x26" />
+      <enum name="CC2420_FSTST0" value="0x27" />
+      <enum name="CC2420_FSTST1" value="0x28" />
+      <enum name="CC2420_FSTST2" value="0x29" />
+      <enum name="CC2420_FSTST3" value="0x2a" />
+      <enum name="CC2420_RXBPFTST" value="0x2b" />
+      <enum name="CC2420_FMSTATE" value="0x2c" />
+      <enum name="CC2420_ADCTST" value="0x2d" />
+      <enum name="CC2420_DACTST" value="0x2e" />
+      <enum name="CC2420_TOPTST" value="0x2f" />
+      <enum name="CC2420_TXFIFO" value="0x3e" />
+      <enum name="CC2420_RXFIFO" value="0x3f" />
+    </namedEnum>
+    <namedEnum name="cc2420_ram_addr_enums">
+      <enum name="CC2420_RAM_TXFIFO" value="0x000" />
+      <enum name="CC2420_RAM_RXFIFO" value="0x080" />
+      <enum name="CC2420_RAM_KEY0" value="0x100" />
+      <enum name="CC2420_RAM_RXNONCE" value="0x110" />
+      <enum name="CC2420_RAM_SABUF" value="0x120" />
+      <enum name="CC2420_RAM_KEY1" value="0x130" />
+      <enum name="CC2420_RAM_TXNONCE" value="0x140" />
+      <enum name="CC2420_RAM_CBCSTATE" value="0x150" />
+      <enum name="CC2420_RAM_IEEEADR" value="0x160" />
+      <enum name="CC2420_RAM_PANID" value="0x168" />
+      <enum name="CC2420_RAM_SHORTADR" value="0x16a" />
+    </namedEnum>
+    <namedEnum name="cc2420_nonce_enums">
+      <enum name="CC2420_NONCE_BLOCK_COUNTER" value="I:0" />
+      <enum name="CC2420_NONCE_KEY_SEQ_COUNTER" value="I:2" />
+      <enum name="CC2420_NONCE_FRAME_COUNTER" value="I:3" />
+      <enum name="CC2420_NONCE_SOURCE_ADDRESS" value="I:7" />
+      <enum name="CC2420_NONCE_FLAGS" value="I:15" />
+    </namedEnum>
+    <namedEnum name="cc2420_main_enums">
+      <enum name="CC2420_MAIN_RESETn" value="I:15" />
+      <enum name="CC2420_MAIN_ENC_RESETn" value="I:14" />
+      <enum name="CC2420_MAIN_DEMOD_RESETn" value="I:13" />
+      <enum name="CC2420_MAIN_MOD_RESETn" value="I:12" />
+      <enum name="CC2420_MAIN_FS_RESETn" value="I:11" />
+      <enum name="CC2420_MAIN_XOSC16M_BYPASS" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_mdmctrl0_enums">
+      <enum name="CC2420_MDMCTRL0_RESERVED_FRAME_MODE" value="I:13" />
+      <enum name="CC2420_MDMCTRL0_PAN_COORDINATOR" value="I:12" />
+      <enum name="CC2420_MDMCTRL0_ADR_DECODE" value="I:11" />
+      <enum name="CC2420_MDMCTRL0_CCA_HYST" value="I:8" />
+      <enum name="CC2420_MDMCTRL0_CCA_MOD" value="I:6" />
+      <enum name="CC2420_MDMCTRL0_AUTOCRC" value="I:5" />
+      <enum name="CC2420_MDMCTRL0_AUTOACK" value="I:4" />
+      <enum name="CC2420_MDMCTRL0_PREAMBLE_LENGTH" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_mdmctrl1_enums">
+      <enum name="CC2420_MDMCTRL1_CORR_THR" value="I:6" />
+      <enum name="CC2420_MDMCTRL1_DEMOD_AVG_MODE" value="I:5" />
+      <enum name="CC2420_MDMCTRL1_MODULATION_MODE" value="I:4" />
+      <enum name="CC2420_MDMCTRL1_TX_MODE" value="I:2" />
+      <enum name="CC2420_MDMCTRL1_RX_MODE" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_rssi_enums">
+      <enum name="CC2420_RSSI_CCA_THR" value="I:8" />
+      <enum name="CC2420_RSSI_RSSI_VAL" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_syncword_enums">
+      <enum name="CC2420_SYNCWORD_SYNCWORD" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_txctrl_enums">
+      <enum name="CC2420_TXCTRL_TXMIXBUF_CUR" value="I:14" />
+      <enum name="CC2420_TXCTRL_TX_TURNAROUND" value="I:13" />
+      <enum name="CC2420_TXCTRL_TXMIX_CAP_ARRAY" value="I:11" />
+      <enum name="CC2420_TXCTRL_TXMIX_CURRENT" value="I:9" />
+      <enum name="CC2420_TXCTRL_PA_CURRENT" value="I:6" />
+      <enum name="CC2420_TXCTRL_RESERVED" value="I:5" />
+      <enum name="CC2420_TXCTRL_PA_LEVEL" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_rxctrl0_enums">
+      <enum name="CC2420_RXCTRL0_RXMIXBUF_CUR" value="I:12" />
+      <enum name="CC2420_RXCTRL0_HIGH_LNA_GAIN" value="I:10" />
+      <enum name="CC2420_RXCTRL0_MED_LNA_GAIN" value="I:8" />
+      <enum name="CC2420_RXCTRL0_LOW_LNA_GAIN" value="I:6" />
+      <enum name="CC2420_RXCTRL0_HIGH_LNA_CURRENT" value="I:4" />
+      <enum name="CC2420_RXCTRL0_MED_LNA_CURRENT" value="I:2" />
+      <enum name="CC2420_RXCTRL0_LOW_LNA_CURRENT" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_rxctrl1_enums">
+      <enum name="CC2420_RXCTRL1_RXBPF_LOCUR" value="I:13" />
+      <enum name="CC2420_RXCTRL1_RXBPF_MIDCUR" value="I:12" />
+      <enum name="CC2420_RXCTRL1_LOW_LOWGAIN" value="I:11" />
+      <enum name="CC2420_RXCTRL1_MED_LOWGAIN" value="I:10" />
+      <enum name="CC2420_RXCTRL1_HIGH_HGM" value="I:9" />
+      <enum name="CC2420_RXCTRL1_MED_HGM" value="I:8" />
+      <enum name="CC2420_RXCTRL1_LNA_CAP_ARRAY" value="I:6" />
+      <enum name="CC2420_RXCTRL1_RXMIX_TAIL" value="I:4" />
+      <enum name="CC2420_RXCTRL1_RXMIX_VCM" value="I:2" />
+      <enum name="CC2420_RXCTRL1_RXMIX_CURRENT" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_rsctrl_enums">
+      <enum name="CC2420_FSCTRL_LOCK_THR" value="I:14" />
+      <enum name="CC2420_FSCTRL_CAL_DONE" value="I:13" />
+      <enum name="CC2420_FSCTRL_CAL_RUNNING" value="I:12" />
+      <enum name="CC2420_FSCTRL_LOCK_LENGTH" value="I:11" />
+      <enum name="CC2420_FSCTRL_LOCK_STATUS" value="I:10" />
+      <enum name="CC2420_FSCTRL_FREQ" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_secctrl0_enums">
+      <enum name="CC2420_SECCTRL0_RXFIFO_PROTECTION" value="I:9" />
+      <enum name="CC2420_SECCTRL0_SEC_CBC_HEAD" value="I:8" />
+      <enum name="CC2420_SECCTRL0_SEC_SAKEYSEL" value="I:7" />
+      <enum name="CC2420_SECCTRL0_SEC_TXKEYSEL" value="I:6" />
+      <enum name="CC2420_SECCTRL0_SEC_RXKEYSEL" value="I:5" />
+      <enum name="CC2420_SECCTRL0_SEC_M" value="I:2" />
+      <enum name="CC2420_SECCTRL0_SEC_MODE" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_secctrl1_enums">
+      <enum name="CC2420_SECCTRL1_SEC_TXL" value="I:8" />
+      <enum name="CC2420_SECCTRL1_SEC_RXL" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_battmon_enums">
+      <enum name="CC2420_BATTMON_BATT_OK" value="I:6" />
+      <enum name="CC2420_BATTMON_BATTMON_EN" value="I:5" />
+      <enum name="CC2420_BATTMON_BATTMON_VOLTAGE" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_iocfg0_enums">
+      <enum name="CC2420_IOCFG0_BCN_ACCEPT" value="I:11" />
+      <enum name="CC2420_IOCFG0_FIFO_POLARITY" value="I:10" />
+      <enum name="CC2420_IOCFG0_FIFOP_POLARITY" value="I:9" />
+      <enum name="CC2420_IOCFG0_SFD_POLARITY" value="I:8" />
+      <enum name="CC2420_IOCFG0_CCA_POLARITY" value="I:7" />
+      <enum name="CC2420_IOCFG0_FIFOP_THR" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_iocfg1_enums">
+      <enum name="CC2420_IOCFG1_HSSD_SRC" value="I:10" />
+      <enum name="CC2420_IOCFG1_SFDMUX" value="I:5" />
+      <enum name="CC2420_IOCFG1_CCAMUX" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_manfidl_enums">
+      <enum name="CC2420_MANFIDL_PARTNUM" value="I:12" />
+      <enum name="CC2420_MANFIDL_MANFID" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_manfidh_enums">
+      <enum name="CC2420_MANFIDH_VERSION" value="I:12" />
+      <enum name="CC2420_MANFIDH_PARTNUM" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_fsmtc_enums">
+      <enum name="CC2420_FSMTC_TC_RXCHAIN2RX" value="I:13" />
+      <enum name="CC2420_FSMTC_TC_SWITCH2TX" value="I:10" />
+      <enum name="CC2420_FSMTC_TC_PAON2TX" value="I:6" />
+      <enum name="CC2420_FSMTC_TC_TXEND2SWITCH" value="I:3" />
+      <enum name="CC2420_FSMTC_TC_TXEND2PAOFF" value="I:0" />
+    </namedEnum>
+    <namedEnum name="cc2420_sfdmux_enums">
+      <enum name="CC2420_SFDMUX_SFD" value="I:0" />
+      <enum name="CC2420_SFDMUX_XOSC16M_STABLE" value="I:24" />
+    </namedEnum>
+    <namedEnum name="cc2420_security_enums">
+      <enum name="CC2420_NO_SEC" value="I:0" />
+      <enum name="CC2420_CBC_MAC" value="I:1" />
+      <enum name="CC2420_CTR" value="I:2" />
+      <enum name="CC2420_CCM" value="I:3" />
+      <enum name="NO_SEC" value="I:0" />
+      <enum name="CBC_MAC_4" value="I:1" />
+      <enum name="CBC_MAC_8" value="I:2" />
+      <enum name="CBC_MAC_16" value="I:3" />
+      <enum name="CTR" value="I:4" />
+      <enum name="CCM_4" value="I:5" />
+      <enum name="CCM_8" value="I:6" />
+      <enum name="CCM_16" value="I:7" />
+    </namedEnum>
+  </enums>
+  <ramSymbols>
+    <ramSymbol address="4403" length="1" name="RpcM__sendingResponse">
+      <type typeClass="unknown" typeDecl="bool" typeName="bool" />
+    </ramSymbol>
+    <ramSymbol address="4364" length="1" name="SerialP__offPending">
+      <type typeClass="unknown" typeDecl="bool" typeName="bool" />
+    </ramSymbol>
+    <ramSymbol address="4389" length="1" name="HdlcTranslateC__state">
+      <type typeClass="unknown" typeDecl="HdlcTranslateC__HdlcState" typeName="HdlcTranslateC__HdlcState" />
+    </ramSymbol>
+    <ramSymbol address="4363" length="1" name="McuSleepC__powerState">
+      <type typeClass="unknown" typeDecl="mcu_power_t" typeName="mcu_power_t" />
+    </ramSymbol>
+    <ramSymbol address="4406" array="true" length="8" name="SchedulerBasicP__m_next">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4414" length="1" name="HdlcTranslateC__m_data">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4416" length="2" name="RpcM__responseMsgPtr">
+      <type typeClass="pointer" typeDecl="message_t*" typeName="message_t" />
+    </ramSymbol>
+    <ramSymbol address="4422" length="1" name="SerialP__rxState">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4423" length="1" name="SerialP__rxSeqno">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4426" length="1" name="BlinkC__counter">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4362" length="1" name="McuSleepC__dirty">
+      <type typeClass="unknown" typeDecl="bool" typeName="bool" />
+    </ramSymbol>
+    <ramSymbol address="4427" length="1" name="SerialP__txByteCnt">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4428" length="1" name="SerialP__txProto">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4430" array="true" length="4" name="SerialP__txBuf">
+      <type typeClass="unknown" typeDecl="SerialP__tx_buf_t" typeName="SerialP__tx_buf_t" />
+    </ramSymbol>
+    <ramSymbol address="4352" length="2" name="TOS_NODE_ID">
+      <type typeClass="unknown" typeDecl="uint16_t" typeName="uint16_t" />
+    </ramSymbol>
+    <ramSymbol address="4434" length="8" name="SerialP__ackQ">
+      <type typeClass="unknown" typeDecl="SerialP__ack_queue_t" typeName="SerialP__ack_queue_t" />
+    </ramSymbol>
+    <ramSymbol address="4394" length="8" name="TelosSerialP__msp430_uart_telos_config">
+      <type typeClass="unknown" typeDecl="msp430_uart_union_config_t" typeName="msp430_uart_union_config_t" />
+    </ramSymbol>
+    <ramSymbol address="4442" length="2" name="SerialP__rxCRC">
+      <type typeClass="unknown" typeDecl="uint16_t" typeName="uint16_t" />
+    </ramSymbol>
+    <ramSymbol address="4444" length="1" name="SerialP__txIndex">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4554" length="1" name="SerialP__txState">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4555" length="1" name="HdlcTranslateC__txTemp">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4556" length="1" name="SerialP__rxByteCnt">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4562" length="5" name="SerialP__rxBuf">
+      <type typeClass="unknown" typeDecl="SerialP__rx_buf_t" typeName="SerialP__rx_buf_t" />
+    </ramSymbol>
+    <ramSymbol address="4567" length="1" name="SerialP__rxProto">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4568" length="1" name="SchedulerBasicP__m_head">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4569" length="1" name="RpcM__processingCommand">
+      <type typeClass="unknown" typeDecl="bool" typeName="bool" />
+    </ramSymbol>
+    <ramSymbol address="4570" length="1" name="SerialP__txSeqno">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4572" length="2" name="RpcM__cmdStoreLength">
+      <type typeClass="unknown" typeDecl="uint16_t" typeName="uint16_t" />
+    </ramSymbol>
+    <ramSymbol address="4578" length="1" name="SerialP__txPending">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4580" length="52" name="RpcM__cmdStore">
+      <type typeClass="unknown" typeDecl="message_t" typeName="message_t" />
+    </ramSymbol>
+    <ramSymbol address="4632" length="13" name="RamSymbolsM__symbol">
+      <type typeClass="unknown" typeDecl="ramSymbol_t" typeName="ramSymbol_t" />
+    </ramSymbol>
+    <ramSymbol address="4645" length="1" name="SchedulerBasicP__m_tail">
+      <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+    </ramSymbol>
+    <ramSymbol address="4646" length="52" name="RpcM__responseMsgBuf">
+      <type typeClass="unknown" typeDecl="message_t" typeName="message_t" />
+    </ramSymbol>
+    <ramSymbol address="4698" length="2" name="SerialP__txCRC">
+      <type typeClass="unknown" typeDecl="uint16_t" typeName="uint16_t" />
+    </ramSymbol>
+  </ramSymbols>
+  <structs>
+    <struct alignment="I:1" defined="" loc="126:/usr/msp430/include/msp430/iostructures.h" name="port_simple_t" ref="0x40326840" size="I:4">
+      <field bit-offset="I:0" name="in" ref="0x40326e58" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:8" name="out" ref="0x40326eb8" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:16" name="dir" ref="0x40326f18" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:24" name="sel" ref="0x40326f78" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="94:/usr/msp430/include/msp430/timerb.h" name="timerb_t" ref="0x403663b0" size="I:32">
+      <field bit-offset="I:0" name="ctl" ref="0x40365640" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x403618f8" />
+          <typename>
+            <typedef-ref name="tbctl_t" ref="0x40361e20" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:16" name="cctl0" ref="0x403656a0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:32" name="cctl1" ref="0x40365700" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:48" name="cctl2" ref="0x40365760" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:64" name="cctl3" ref="0x403657c0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:80" name="cctl4" ref="0x40365820" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:96" name="cctl5" ref="0x40365880" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:112" name="cctl6" ref="0x403658e0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035fc08" />
+          <typename>
+            <typedef-ref name="tbcctl_t" ref="0x403661e8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:128" name="tbr" ref="0x40365940" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:144" name="tbccr0" ref="0x403659a0" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:160" name="tbccr1" ref="0x40365a00" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:176" name="tbccr2" ref="0x40365a60" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:192" name="tbccr3" ref="0x40365ac0" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:208" name="tbccr4" ref="0x40365ba0" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:224" name="tbccr5" ref="0x40365c00" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:240" name="tbccr6" ref="0x40365c60" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="46:/usr/msp430/include/sys/reent.h" name="__tm" ref="0x402c1a78" size="I:18">
+      <field bit-offset="I:0" name="__tm_sec" ref="0x402c04b8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:16" name="__tm_min" ref="0x402c0518" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:32" name="__tm_hour" ref="0x402c0578" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:48" name="__tm_mday" ref="0x402c05d8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:64" name="__tm_mon" ref="0x402c0638" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:80" name="__tm_year" ref="0x402c0698" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:96" name="__tm_wday" ref="0x402c06f8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:112" name="__tm_yday" ref="0x402c0758" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:128" name="__tm_isdst" ref="0x402c07b8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="174:/usr/msp430/include/sys/reent.h" name="_rand48" ref="0x402cb0c8" size="I:14">
+      <field bit-offset="I:0" name="_seed" ref="0x402cb5f8" size="I:6">
+        <type-array alignment="I:2" elements="I:3" size="I:6">
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="" />
+        </type-array>
+      </field>
+      <field bit-offset="I:48" name="_mult" ref="0x402cb658" size="I:6">
+        <type-array alignment="I:2" elements="I:3" size="I:6">
+          <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="" />
+        </type-array>
+      </field>
+      <field bit-offset="I:96" name="_add" ref="0x402cb6b8" size="I:2">
+        <type-int alignment="I:2" cname="unsigned short" size="I:2" unsigned="" />
+      </field>
+    </struct>
+    <struct alignment="I:1" defined="" loc="108:/usr/msp430/include/msp430/iostructures.h" name="port_full_t" ref="0x40321aa8" size="I:7">
+      <field bit-offset="I:0" name="in" ref="0x40326498" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:8" name="out" ref="0x403264f8" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:16" name="dir" ref="0x40326558" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:24" name="ifg" ref="0x403265b8" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:32" name="ies" ref="0x40326618" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:40" name="ie" ref="0x40326678" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:48" name="sel" ref="0x403266d8" size="I:1">
+        <type-tag alignment="I:1" size="I:1">
+          <typename>
+            <typedef-ref name="ioregister_t" ref="0x403218b8" />
+          </typename>
+          <union-ref name="port" ref="0x40322668" />
+        </type-tag>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="188:/usr/msp430/include/sys/reent.h" name="_reent" ref="0x402c7520" size="I:398">
+      <field bit-offset="I:0" name="_errno" ref="0x402cc0e0" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:16" name="_stdin" ref="0x402cc140" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:48">
+            <struct-ref name="__sFILE" ref="0x402bdce0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:32" name="_stdout" ref="0x402cc1a0" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:48">
+            <struct-ref name="__sFILE" ref="0x402bdce0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:48" name="_stderr" ref="0x402cc200" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:48">
+            <struct-ref name="__sFILE" ref="0x402bdce0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:64" name="_inc" ref="0x402cc260" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:80" name="_emergency" ref="0x402cc2c0" size="I:25">
+        <type-array alignment="I:1" elements="I:25" size="I:25">
+          <type-int alignment="I:1" cname="char" size="I:1" />
+        </type-array>
+      </field>
+      <field bit-offset="I:288" name="_current_category" ref="0x402cc320" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:304" name="_current_locale" ref="0x402cc380" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-qualified const="">
+            <type-int alignment="I:1" cname="char" size="I:1" />
+          </type-qualified>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:320" name="__sdidinit" ref="0x402cc3e0" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:336" name="__cleanup" ref="0x402cc440" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-function alignment="I:1" size="I:1">
+            <function-parameters>
+              <type-pointer alignment="I:2" size="I:2">
+                <type-tag alignment="I:2" size="I:398">
+                  <struct-ref name="_reent" ref="0x402c7520" />
+                </type-tag>
+              </type-pointer>
+            </function-parameters>
+            <type-void alignment="I:1" size="I:1" />
+          </type-function>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:352" name="_result" ref="0x402cc4b0" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:14">
+            <struct-ref name="_Bigint" ref="0x402c10e8" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:368" name="_result_k" ref="0x402cc510" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:384" name="_p5s" ref="0x402cc570" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:14">
+            <struct-ref name="_Bigint" ref="0x402c10e8" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:400" name="_freelist" ref="0x402cc650" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:14">
+              <struct-ref name="_Bigint" ref="0x402c10e8" />
+            </type-tag>
+          </type-pointer>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:416" name="_cvtlen" ref="0x402cc6b0" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:432" name="_cvtbuf" ref="0x402cc710" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-int alignment="I:1" cname="char" size="I:1" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:448" name="_new" ref="0x402cc770" size="I:120">
+        <type-tag alignment="I:2" size="I:120">
+          <union-ref ref="0x402ce3d8" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:1408" name="_atexit" ref="0x402cc7d0" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:68">
+            <struct-ref name="_atexit" ref="0x402c08f0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:1424" name="_atexit0" ref="0x402cc830" size="I:68">
+        <type-tag alignment="I:2" size="I:68">
+          <struct-ref name="_atexit" ref="0x402c08f0" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:1968" name="_sig_func" ref="0x402cc890" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-function alignment="I:1" size="I:1">
+              <function-parameters>
+                <type-int alignment="I:2" cname="int" size="I:2" />
+              </function-parameters>
+              <type-void alignment="I:1" size="I:1" />
+            </type-function>
+          </type-pointer>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:1984" name="__sglue" ref="0x402cc900" size="I:6">
+        <type-tag alignment="I:2" size="I:6">
+          <struct-ref name="_glue" ref="0x402bd858" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:2032" name="__sf" ref="0x402cc960" size="I:144">
+        <type-array alignment="I:2" elements="I:3" size="I:144">
+          <type-tag alignment="I:2" size="I:48">
+            <struct-ref name="__sFILE" ref="0x402bdce0" />
+          </type-tag>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:1" defined="" loc="70:/opt/tinyos-2.x-contrib/marionette/tos/lib/Rpc/Rpc.h" name="RpcResponseMsg" packed="" ref="0x406c8798" size="I:6">
+      <field bit-offset="I:0" name="transactionID" ref="0x406c73d8" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:8" name="commandID" ref="0x406c7438" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:16" name="sourceAddress" ref="0x406c7498" size="I:2">
+        <type-int alignment="I:1" cname="unsigned int" network="nxle_uint16_t" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint16_t" ref="0x402937a0" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:32" name="errorCode" ref="0x406c74f8" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:40" name="dataLength" ref="0x406c7558" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:48" name="data" ref="0x406c75b8" size="I:0">
+        <type-array alignment="I:1" elements="I:0" size="I:0">
+          <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+            <typename>
+              <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+            </typename>
+          </type-int>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="98:/opt/tinyos-2.1.1/tos/lib/serial/Serial.h" name="radio_stats" ref="0x4083c9b8" size="I:18">
+      <field bit-offset="I:0" name="version" ref="0x4083bb28" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="uint8_t" ref="0x400332d8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:8" name="flags" ref="0x4083bb88" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="uint8_t" ref="0x400332d8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:16" name="reserved" ref="0x4083bbe8" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="uint8_t" ref="0x400332d8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:24" name="platform" ref="0x4083bc48" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="uint8_t" ref="0x400332d8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:32" name="MTU" ref="0x4083bca8" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:48" name="radio_crc_fail" ref="0x4083bd08" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:64" name="radio_queue_drops" ref="0x4083bd68" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:80" name="serial_crc_fail" ref="0x4083bdc8" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:96" name="serial_tx_fail" ref="0x4083be28" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:112" name="serial_short_packets" ref="0x4083be88" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:128" name="serial_proto_drops" ref="0x4083bee8" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="uint16_t" ref="0x400336e8" />
+          </typename>
+        </type-int>
+      </field>
+    </struct>
+    <struct alignment="I:1" defined="" loc="77:/usr/msp430/include/msp430/adc12.h" name="adc12_t" ref="0x4036e780" size="I:10">
+      <field bit-offset="I:0" name="ctl0" ref="0x4036eea0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4036a458" />
+          <typename>
+            <typedef-ref name="adc12ctl0_t" ref="0x4036a980" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:16" name="ctl1" ref="0x4036ef00" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x40371550" />
+          <typename>
+            <typedef-ref name="adc12ctl1_t" ref="0x403719b8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:32" name="ifg" ref="0x4036ef60" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4036fd88" />
+          <typename>
+            <typedef-ref name="adc12xflg_t" ref="0x4036e5c8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:48" name="ie" ref="0x40375010" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4036fd88" />
+          <typename>
+            <typedef-ref name="adc12xflg_t" ref="0x4036e5c8" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:64" name="iv" ref="0x40375070" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4036fd88" />
+          <typename>
+            <typedef-ref name="adc12xflg_t" ref="0x4036e5c8" />
+          </typename>
+        </type-tag>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="78:/usr/msp430/include/sys/reent.h" name="__sbuf" ref="0x402c51a8" size="I:4">
+      <field bit-offset="I:0" name="_base" ref="0x402c54b8" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:16" name="_size" ref="0x402c5518" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+    </struct>
+    <struct alignment="I:1" defined="" loc="59:/opt/tinyos-2.x-contrib/marionette/tos/lib/Rpc/Rpc.h" name="RpcCommandMsg" packed="" ref="0x406c9490" size="I:8">
+      <field bit-offset="I:0" name="transactionID" ref="0x406c8278" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:8" name="commandID" ref="0x406c82d8" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:16" name="address" ref="0x406c8338" size="I:2">
+        <type-int alignment="I:1" cname="unsigned int" network="nxle_uint16_t" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint16_t" ref="0x402937a0" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:32" name="returnAddress" ref="0x406c8398" size="I:2">
+        <type-int alignment="I:1" cname="unsigned int" network="nxle_uint16_t" size="I:2" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint16_t" ref="0x402937a0" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:48" name="responseDesired" ref="0x406c83f8" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:56" name="dataLength" ref="0x406c8458" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:64" name="data" ref="0x406c84b8" size="I:0">
+        <type-array alignment="I:1" elements="I:0" size="I:0">
+          <type-int alignment="I:1" cname="unsigned char" network="nxle_uint8_t" size="I:1" unsigned="">
+            <typename>
+              <typedef-ref name="nxle_uint8_t" ref="0x402932f8" />
+            </typename>
+          </type-int>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="31:/usr/msp430/include/sys/reent.h" name="_glue" ref="0x402bd858" size="I:6">
+      <field bit-offset="I:0" name="_next" ref="0x402bdec8" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:6">
+            <struct-ref name="_glue" ref="0x402bd858" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:16" name="_niobs" ref="0x402bdf28" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:32" name="_iobs" ref="0x402bdf88" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:48">
+            <struct-ref name="__sFILE" ref="0x402bdce0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="38:/usr/msp430/include/sys/reent.h" name="_Bigint" ref="0x402c10e8" size="I:14">
+      <field bit-offset="I:0" name="_next" ref="0x402c1768" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:14">
+            <struct-ref name="_Bigint" ref="0x402c10e8" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:16" name="_k" ref="0x402c17c8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:32" name="_maxwds" ref="0x402c1828" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:48" name="_sign" ref="0x402c1888" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:64" name="_wds" ref="0x402c18e8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:80" name="_x" ref="0x402c1948" size="I:4">
+        <type-array alignment="I:2" elements="I:1" size="I:4">
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename>
+              <typedef-ref name="__ULong" ref="0x402bd6b0" />
+            </typename>
+          </type-int>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="208:/usr/msp430/include/math.h" name="exception" ref="0x40300010" size="I:18">
+      <field bit-offset="I:0" name="type" ref="0x40300630" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:16" name="name" ref="0x40300690" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-int alignment="I:1" cname="char" size="I:1" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:32" name="arg1" ref="0x403006f0" size="I:4">
+        <type-float alignment="I:2" cname="double" size="I:4" />
+      </field>
+      <field bit-offset="I:64" name="arg2" ref="0x40300750" size="I:4">
+        <type-float alignment="I:2" cname="double" size="I:4" />
+      </field>
+      <field bit-offset="I:96" name="retval" ref="0x403007b0" size="I:4">
+        <type-float alignment="I:2" cname="double" size="I:4" />
+      </field>
+      <field bit-offset="I:128" name="err" ref="0x40300810" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+    </struct>
+    <struct alignment="I:1" defined="" loc="31:/opt/tinyos-2.x-contrib/marionette/tos/lib/RamSymbols/RamSymbols.h" name="ramSymbol_t" packed="" ref="0x40817788" size="I:13">
+      <field bit-offset="I:0" name="memAddress" ref="0x40817f70" size="I:2">
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+      </field>
+      <field bit-offset="I:16" name="length" ref="0x40815010" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="uint8_t" ref="0x400332d8" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:24" name="dereference" ref="0x40815070" size="I:1">
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename>
+            <typedef-ref name="bool" ref="0x403129a0" />
+          </typename>
+        </type-int>
+      </field>
+      <field bit-offset="I:32" name="data" ref="0x408150d0" size="I:9">
+        <type-array alignment="I:1" elements="I:9" size="I:9">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename>
+              <typedef-ref name="uint8_t" ref="0x400332d8" />
+            </typename>
+          </type-int>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="146:/usr/msp430/include/msp430/timera.h" name="timera_t" ref="0x4035aa48" size="I:24">
+      <field bit-offset="I:0" name="ctl" ref="0x403595b0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x40355d20" />
+          <typename>
+            <typedef-ref name="tactl_t" ref="0x40353188" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:16" name="cctl0" ref="0x40359610" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035a098" />
+          <typename>
+            <typedef-ref name="tacctl_t" ref="0x4035a880" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:32" name="cctl1" ref="0x40359670" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035a098" />
+          <typename>
+            <typedef-ref name="tacctl_t" ref="0x4035a880" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:48" name="cctl2" ref="0x403596d0" size="I:2">
+        <type-tag alignment="I:1" size="I:2">
+          <struct-ref ref="0x4035a098" />
+          <typename>
+            <typedef-ref name="tacctl_t" ref="0x4035a880" />
+          </typename>
+        </type-tag>
+      </field>
+      <field bit-offset="I:64" name="dummy" ref="0x40359730" size="I:8">
+        <type-qualified volatile="">
+          <type-array alignment="I:2" elements="I:4" size="I:8">
+            <type-qualified volatile="">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+            </type-qualified>
+          </type-array>
+        </type-qualified>
+      </field>
+      <field bit-offset="I:128" name="tar" ref="0x40359790" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:144" name="taccr0" ref="0x403597f0" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:160" name="taccr1" ref="0x40359850" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+      <field bit-offset="I:176" name="taccr2" ref="0x403598b0" size="I:2">
+        <type-qualified volatile="">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="" />
+        </type-qualified>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="65:/usr/msp430/include/sys/reent.h" name="_atexit" ref="0x402c08f0" size="I:68">
+      <field bit-offset="I:0" name="_next" ref="0x402c0f78" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:68">
+            <struct-ref name="_atexit" ref="0x402c08f0" />
+          </type-tag>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:16" name="_ind" ref="0x402c5010" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:32" name="_fns" ref="0x402c5070" size="I:64">
+        <type-array alignment="I:2" elements="I:32" size="I:64">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-function alignment="I:1" size="I:1">
+              <function-parameters></function-parameters>
+              <type-void alignment="I:1" size="I:1" />
+            </type-function>
+          </type-pointer>
+        </type-array>
+      </field>
+    </struct>
+    <struct alignment="I:2" defined="" loc="116:/usr/msp430/include/sys/reent.h" name="__sFILE" ref="0x402bdce0" size="I:48">
+      <field bit-offset="I:0" name="_p" ref="0x402c7708" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:16" name="_r" ref="0x402c7768" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:32" name="_w" ref="0x402c77c8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:48" name="_flags" ref="0x402c7828" size="I:2">
+        <type-int alignment="I:2" cname="short" size="I:2" />
+      </field>
+      <field bit-offset="I:64" name="_file" ref="0x402c7888" size="I:2">
+        <type-int alignment="I:2" cname="short" size="I:2" />
+      </field>
+      <field bit-offset="I:80" name="_bf" ref="0x402c78e8" size="I:4">
+        <type-tag alignment="I:2" size="I:4">
+          <struct-ref name="__sbuf" ref="0x402c51a8" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:112" name="_lbfsize" ref="0x402c7948" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:128" name="_cookie" ref="0x402c79a8" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-void alignment="I:1" size="I:1" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:144" name="_read" ref="0x402c7a08" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-function alignment="I:1" size="I:1">
+            <function-parameters>
+              <type-int alignment="I:2" cname="int" size="I:2" />
+              <type-pointer alignment="I:2" size="I:2">
+                <type-void alignment="I:1" size="I:1" />
+              </type-pointer>
+              <type-pointer alignment="I:2" size="I:2">
+                <type-int alignment="I:1" cname="char" size="I:1" />
+              </type-pointer>
+            </function-parameters>
+            <type-int alignment="I:2" cname="int" size="I:2" />
+          </type-function>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:160" name="_write" ref="0x402c7a88" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-function alignment="I:1" size="I:1">
+            <function-parameters>
+              <type-int alignment="I:2" cname="int" size="I:2" />
+              <type-pointer alignment="I:2" size="I:2">
+                <type-void alignment="I:1" size="I:1" />
+              </type-pointer>
+              <type-pointer alignment="I:2" size="I:2">
+                <type-qualified const="">
+                  <type-int alignment="I:1" cname="char" size="I:1" />
+                </type-qualified>
+              </type-pointer>
+            </function-parameters>
+            <type-int alignment="I:2" cname="int" size="I:2" />
+          </type-function>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:176" name="_seek" ref="0x402c7b08" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-function alignment="I:1" size="I:1">
+            <function-parameters>
+              <type-int alignment="I:2" cname="long" size="I:4">
+                <typename>
+                  <typedef-ref name="_fpos_t" ref="0x402c5698" />
+                </typename>
+              </type-int>
+              <type-int alignment="I:2" cname="int" size="I:2" />
+              <type-pointer alignment="I:2" size="I:2">
+                <type-void alignment="I:1" size="I:1" />
+              </type-pointer>
+            </function-parameters>
+            <type-int alignment="I:2" cname="long" size="I:4">
+              <typename>
+                <typedef-ref name="_fpos_t" ref="0x402c5698" />
+              </typename>
+            </type-int>
+          </type-function>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:192" name="_close" ref="0x402c7b88" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-function alignment="I:1" size="I:1">
+            <function-parameters>
+              <type-pointer alignment="I:2" size="I:2">
+                <type-void alignment="I:1" size="I:1" />
+              </type-pointer>
+            </function-parameters>
+            <type-int alignment="I:2" cname="int" size="I:2" />
+          </type-function>
+        </type-pointer>
+      </field>
+      <field bit-offset="I:208" name="_ub" ref="0x402c7bf8" size="I:4">
+        <type-tag alignment="I:2" size="I:4">
+          <struct-ref name="__sbuf" ref="0x402c51a8" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:240" name="_up" ref="0x402c7cd8" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="" />
+        </type-pointer>
+      </field>
+      <field bit-offset="I:256" name="_ur" ref="0x402c7d38" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:272" name="_ubuf" ref="0x402c7d98" size="I:3">
+        <type-array alignment="I:1" elements="I:3" size="I:3">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="" />
+        </type-array>
+      </field>
+      <field bit-offset="I:296" name="_nbuf" ref="0x402c7df8" size="I:1">
+        <type-array alignment="I:1" elements="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="" />
+        </type-array>
+      </field>
+      <field bit-offset="I:304" name="_lb" ref="0x402c7e58" size="I:4">
+        <type-tag alignment="I:2" size="I:4">
+          <struct-ref name="__sbuf" ref="0x402c51a8" />
+        </type-tag>
+      </field>
+      <field bit-offset="I:336" name="_blksize" ref="0x402c7eb8" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:352" name="_offset" ref="0x402c7f18" size="I:2">
+        <type-int alignment="I:2" cname="int" size="I:2" />
+      </field>
+      <field bit-offset="I:368" name="_data" ref="0x402c7f78" size="I:2">
+        <type-pointer alignment="I:2" size="I:2">
+          <type-tag alignment="I:2" size="I:398">
+            <struct-ref name="_reent" ref="0x402c7520" />
+          </type-tag>
+        </type-pointer>
+      </field>
+    </struct>
+  </structs>
+  <typedefs>
+    <typedef name="ptrdiff_t" value="int" />
+    <typedef name="size_t" value="unsigned int" />
+    <typedef name="wchar_t" value="int" />
+    <typedef name="int8_t" value="signed char" />
+    <typedef name="uint8_t" value="unsigned char" />
+    <typedef name="int16_t" value="int" />
+    <typedef name="uint16_t" value="unsigned int" />
+    <typedef name="int32_t" value="long" />
+    <typedef name="uint32_t" value="unsigned long" />
+    <typedef name="int64_t" value="long long" />
+    <typedef name="uint64_t" value="unsigned long long" />
+    <typedef name="intptr_t" value="int16_t" />
+    <typedef name="uintptr_t" value="uint16_t" />
+    <typedef name="__nesc_nxbase_nx_int8_t" value="int8_t" />
+    <typedef name="__nesc_nxbase_nx_int16_t" value="int16_t" />
+    <typedef name="__nesc_nxbase_nx_int32_t" value="int32_t" />
+    <typedef name="__nesc_nxbase_nx_int64_t" value="int64_t" />
+    <typedef name="__nesc_nxbase_nx_uint8_t" value="uint8_t" />
+    <typedef name="__nesc_nxbase_nx_uint16_t" value="uint16_t" />
+    <typedef name="__nesc_nxbase_nx_uint32_t" value="uint32_t" />
+    <typedef name="__nesc_nxbase_nx_uint64_t" value="uint64_t" />
+    <typedef name="__nesc_nxbase_nxle_int8_t" value="int8_t" />
+    <typedef name="__nesc_nxbase_nxle_int16_t" value="int16_t" />
+    <typedef name="__nesc_nxbase_nxle_int32_t" value="int32_t" />
+    <typedef name="__nesc_nxbase_nxle_int64_t" value="int64_t" />
+    <typedef name="__nesc_nxbase_nxle_uint8_t" value="uint8_t" />
+    <typedef name="__nesc_nxbase_nxle_uint16_t" value="uint16_t" />
+    <typedef name="__nesc_nxbase_nxle_uint32_t" value="uint32_t" />
+    <typedef name="__nesc_nxbase_nxle_uint64_t" value="uint64_t" />
+    <typedef name="u_char" value="unsigned char" />
+    <typedef name="u_short" value="unsigned short" />
+    <typedef name="u_int" value="unsigned int" />
+    <typedef name="u_long" value="unsigned long" />
+    <typedef name="ushort" value="unsigned short" />
+    <typedef name="uint" value="unsigned int" />
+    <typedef name="u_int8_t" value="uint8_t" />
+    <typedef name="u_int16_t" value="uint16_t" />
+    <typedef name="u_int32_t" value="uint32_t" />
+    <typedef name="u_int64_t" value="uint64_t" />
+    <typedef name="u_quad_t" value="u_int64_t" />
+    <typedef name="quad_t" value="int64_t" />
+    <typedef name="fixpt_t" value="u_int32_t" />
+    <typedef name="gid_t" value="u_int32_t" />
+    <typedef name="in_addr_t" value="u_int32_t" />
+    <typedef name="in_port_t" value="u_int16_t" />
+    <typedef name="ino_t" value="u_int32_t" />
+    <typedef name="key_t" value="long" />
+    <typedef name="mode_t" value="u_int16_t" />
+    <typedef name="nlink_t" value="u_int16_t" />
+    <typedef name="rlim_t" value="quad_t" />
+    <typedef name="segsz_t" value="int32_t" />
+    <typedef name="swblk_t" value="int32_t" />
+    <typedef name="ufs_daddr_t" value="int32_t" />
+    <typedef name="ufs_time_t" value="int32_t" />
+    <typedef name="uid_t" value="u_int32_t" />
+    <typedef name="__int32_t" value="long int" />
+    <typedef name="__uint32_t" value="unsigned long int" />
+    <typedef name="_off_t" value="long" />
+    <typedef name="_ssize_t" value="long" />
+    <typedef name="__ULong" value="__uint32_t" />
+    <typedef name="_fpos_t" value="long" />
+    <typedef name="bool" value="uint8_t" />
+    <typedef name="nx_bool" value="nx_int8_t" />
+    <typedef name="error_t" value="uint8_t" />
+    <typedef name="mcu_power_t" value="uint8_t" />
+    <typedef name="__nesc_atomic_t" value="bool" />
+    <typedef name="__nesc_nxbase_nx_float" value="float" />
+    <typedef name="cc2420_status_t" value="uint8_t" />
+    <typedef name="nx_am_id_t" value="nx_uint8_t" />
+    <typedef name="nx_am_group_t" value="nx_uint8_t" />
+    <typedef name="nx_am_addr_t" value="nx_uint16_t" />
+    <typedef name="am_id_t" value="uint8_t" />
+    <typedef name="am_group_t" value="uint8_t" />
+    <typedef name="am_addr_t" value="uint16_t" />
+    <typedef name="uart_id_t" value="uint8_t" />
+    <typedef name="uart_speed_t" value="uint8_t" />
+    <typedef name="uart_parity_t" value="uint8_t" />
+    <typedef name="uart_duplex_t" value="uint8_t" />
+    <typedef name="resource_client_id_t" value="uint8_t" />
+    <typedef name="RpcCommandMsg" value="RpcCommandMsg" />
+    <typedef name="RpcResponseMsg" value="RpcResponseMsg" />
+    <typedef name="ramSymbol_t" value="ramSymbol_t" />
+    <typedef name="radio_stats_t" value="radio_stats" />
+  </typedefs>
+</nescDecls>

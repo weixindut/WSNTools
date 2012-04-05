@@ -1,0 +1,39 @@
+<?xml version='1.0' standalone='yes'?>
+<rpcSchema>
+  <rpcFunctions>
+    <BlinkC.initLeds commandID="0" componentName="BlinkC" functionName="initLeds" functionType="command" numParams="0" provided="1" signature=" command void BlinkC.initLeds (  ) ">
+      <params></params>
+      <returnType typeClass="unknown" typeDecl="void" typeName="void" />
+    </BlinkC.initLeds>
+    <BlinkC.initLeds2 commandID="1" componentName="BlinkC" functionName="initLeds2" functionType="command" numParams="1" provided="1" signature=" command void BlinkC.initLeds2 ( uint8_t value  ) ">
+      <params>
+        <param0 name="value">
+          <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+        </param0>
+      </params>
+      <returnType typeClass="unknown" typeDecl="void" typeName="void" />
+    </BlinkC.initLeds2>
+    <RamSymbolsM.peek commandID="2" componentName="RamSymbolsM" functionName="peek" functionType="command" numParams="3" provided="1" signature=" command ramSymbol_t RamSymbolsM.peek ( unsigned int memAddress, uint8_t length, bool dereference  ) ">
+      <params>
+        <param0 name="memAddress">
+          <type typeClass="unknown" typeDecl="unsigned int" typeName="unsigned int" />
+        </param0>
+        <param1 name="length">
+          <type typeClass="unknown" typeDecl="uint8_t" typeName="uint8_t" />
+        </param1>
+        <param2 name="dereference">
+          <type typeClass="unknown" typeDecl="bool" typeName="bool" />
+        </param2>
+      </params>
+      <returnType typeClass="unknown" typeDecl="ramSymbol_t" typeName="ramSymbol_t" />
+    </RamSymbolsM.peek>
+    <RamSymbolsM.poke commandID="3" componentName="RamSymbolsM" functionName="poke" functionType="command" numParams="1" provided="1" signature=" command unsigned int RamSymbolsM.poke ( ramSymbol_t* symbol  ) ">
+      <params>
+        <param0 name="symbol">
+          <type typeClass="pointer" typeDecl="ramSymbol_t*" typeName="ramSymbol_t" />
+        </param0>
+      </params>
+      <returnType typeClass="unknown" typeDecl="unsigned int" typeName="unsigned int" />
+    </RamSymbolsM.poke>
+  </rpcFunctions>
+</rpcSchema>
